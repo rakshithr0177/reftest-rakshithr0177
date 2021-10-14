@@ -1,0 +1,28 @@
+Reading symbols from a.out...
+(gdb) run
+Starting program: /home/a.out 
+
+Breakpoint 1, main () at main.c:8
+8           printf("Enter base and alititude\n");
+(gdb) next
+Enter base and alititude
+9           scanf("%f%f",&base,&altitude);
+(gdb) next
+1 1
+10          area = 0.5 * base * altitude;
+(gdb) p base
+$1 = 1
+(gdb) p altitude
+$2 = 1
+(gdb) next
+11          printf("Area of the triange with base = %.2f and altitude = %.2f is %.2f\n",base,altitude,area);
+(gdb) p arear
+No symbol "arear" in current context.
+(gdb) p area 
+$3 = 0.5
+(gdb) n
+Area of the triange with base = 1.00 and altitude = 1.00 is 0.50
+12          return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 5272) exited normally]
